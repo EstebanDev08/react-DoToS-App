@@ -13,25 +13,23 @@ function useLocalStorage(itemName, initialValue) {
         setTimeout(() => {
             try {
                 const localStorageItem = localStorage.getItem(itemName);
-                let parsedItem;
-
 
                 if (!localStorageItem) {
                     localStorage.setItem(itemName, JSON.stringify(initialValue))
-                    parsedItem = initialValue
+                    
                 } else {
-                    parsedItem = JSON.parse(localStorageItem)
+                   const parsedItem = JSON.parse(localStorageItem)
+                    setItems(parsedItem)
                 }
-
-
-                setItems(parsedItem)
+         
                 setLoading(false);
             } catch (error) {
-                setError(error)
+                setError(true)
+                setLoading(false);
             }
 
         }, 1000)
-    });
+    }, [itemName, initialValue]);
 
 
     const saveItems = (newItems) => {
