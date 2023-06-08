@@ -25,27 +25,17 @@ function App() {
       <TodoContext.Consumer>
         {({ loading,
           error,
-          totalTodos,
-          completedTodos,
-          searchValue,
-          setSearchValue,
           searcedtodos,
           completeTodos,
           deleteTodos,
-          openModal,
-          setOpenModal, }) => (
+          openModal,}) => (
 
           <>
 
-            <TodoCounter
-              completed={completedTodos}
-              total={totalTodos}
+            <TodoCounter/>
 
-            />
-            <TodoSearch
-              searchValue={searchValue}
-              setSearchValue={setSearchValue}
-            />
+
+            <TodoSearch/>
 
             <TodoList>
               {loading && <LoadingTodos/>}
@@ -68,10 +58,7 @@ function App() {
               <p>hola</p>
             </Modal>)}
 
-            <CreateTodoButton
-              setOpenModal={setOpenModal}
-
-            />
+            <CreateTodoButton/>
           </>
 
 
