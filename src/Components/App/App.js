@@ -11,6 +11,7 @@ import { Modal } from '../Modal/Modal'
 
 
  import './App.css';
+import { NoTodos } from '../NoTodos/NoTodos';
 
 
 
@@ -49,7 +50,7 @@ function App() {
             <TodoList>
               {loading && <LoadingTodos/>}
               {error && <p>error list</p>} 
-              {(!loading && !searcedtodos.length) && <p>crea todo</p>}
+              {(!loading && !searcedtodos.length) && <NoTodos/>}
 
 
               {searcedtodos.map(todo => (
