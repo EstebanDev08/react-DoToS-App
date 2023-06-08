@@ -17,10 +17,16 @@ import { NoTodos } from '../NoTodos/NoTodos';
 
 function App() {
 
-
+  
 
   return (
     <TodoProvider>
+
+
+      <TodoCounter/>
+
+      <TodoSearch/>
+
 
       <TodoContext.Consumer>
         {({ loading,
@@ -31,12 +37,6 @@ function App() {
           openModal,}) => (
 
           <>
-
-            <TodoCounter/>
-
-
-            <TodoSearch/>
-
             <TodoList>
               {loading && <LoadingTodos/>}
               {error && <p>error list</p>} 
@@ -53,17 +53,17 @@ function App() {
                 />
               ))}
             </TodoList>
+            
+            {openModal && <Modal/>}
 
-            {openModal && (<Modal>
-              <p>hola</p>
-            </Modal>)}
-
-            <CreateTodoButton/>
           </>
 
 
         )}
       </TodoContext.Consumer>
+
+
+      <CreateTodoButton/>
 
 
     </TodoProvider>

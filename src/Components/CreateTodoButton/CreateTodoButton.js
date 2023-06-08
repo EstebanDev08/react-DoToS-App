@@ -4,7 +4,7 @@ import { TodoContext } from '../TodoContext/TodoContext';
 
 function CreateTodoButton() {
 
-    const {setOpenModal} = React.useContext(TodoContext)
+    const {setOpenModal, openModal} = React.useContext(TodoContext)
 
     const click = () => {
 
@@ -12,10 +12,10 @@ function CreateTodoButton() {
 
     }
 
-
+    const isOpen = openModal ? "open":"";
     return (
         <button
-            className="CreateTodoButton"
+            className={`CreateTodoButton ${isOpen}`}
             onClick={click}
         >+</button>
     );
