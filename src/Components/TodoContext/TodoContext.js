@@ -39,11 +39,8 @@ function TodoProvider(props) {
 
         const newTodos = [...todos];
 
-        if (newTodos[todoIndex].completed) {
-            newTodos[todoIndex].completed = false
-        } else {
-            newTodos[todoIndex].completed = true;
-        }
+
+        newTodos[todoIndex].completed = !newTodos[todoIndex].completed;
 
         saveTodos(newTodos)
     }

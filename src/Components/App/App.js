@@ -9,7 +9,7 @@ import { TodoContext } from '../TodoContext/TodoContext';
 import { Modal } from '../Modal/Modal'
 
 
-// import './App.css';
+ import './App.css';
 
 
 

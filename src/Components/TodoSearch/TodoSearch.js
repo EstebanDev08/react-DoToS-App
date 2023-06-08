@@ -8,6 +8,7 @@ function TodoSearch({ searchValue, setSearchValue }) {
         setSearchValue(event.target.value);
     }
 
+    
     return (
         <>
             <input
