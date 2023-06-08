@@ -6,6 +6,7 @@ import { TodoItem } from '../TodoItem/TodoItem';
 import { CreateTodoButton } from '../CreateTodoButton/CreateTodoButton';
 import { TodoProvider } from '../TodoContext/TodoContext'
 import { TodoContext } from '../TodoContext/TodoContext';
+import { LoadingTodos } from '../LoadingTodos/LoadingTodos';
 import { Modal } from '../Modal/Modal'
 
 
@@ -46,8 +47,8 @@ function App() {
             />
 
             <TodoList>
-              {loading && <p>cargandoooo</p>}
-              {error && <p>error list</p>}
+              {loading && <LoadingTodos/>}
+              {error && <p>error list</p>} 
               {(!loading && !searcedtodos.length) && <p>crea todo</p>}
 
 
