@@ -69,6 +69,8 @@ function TodoProvider(props) {
             deleteTodos,
             openModal,
             setOpenModal,
+            todos,
+            saveTodos,
 
         }}>
             {props.children}

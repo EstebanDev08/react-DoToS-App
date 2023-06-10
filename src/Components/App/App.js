@@ -12,6 +12,7 @@ import { Modal } from '../Modal/Modal'
 
  import './App.css';
 import { NoTodos } from '../NoTodos/NoTodos';
+import { TodoForm } from '../TodoForm/TodoForm';
 
 
 
@@ -54,7 +55,7 @@ function App() {
               ))}
             </TodoList>
             
-            {openModal && <Modal/>}
+            {openModal && <Modal> <TodoForm/> </Modal>}
 
           </>
 
