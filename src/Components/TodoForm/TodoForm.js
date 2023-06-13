@@ -19,11 +19,9 @@ function TodoForm (){
             text: event.target[0].value,
             completed : false,
         }
-        console.log(newTodos);
         newTodos.push(newTodo);
         
         saveTodos(newTodos);
-
         closeModal();
 
     }
